@@ -4,10 +4,10 @@ import { render } from "react-dom";
 import {} from "./styles.css";
 
 // upper camel case
-const ReturnReactElement = props => {
+const ReturnReactElement = ({ name, music }) => {
   return (
     <h2>
-      {props.name} / {props.music}
+      {name} / {music}
     </h2>
   );
 };
