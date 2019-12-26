@@ -9,7 +9,7 @@ console.log(el);
 const title = "こんにちは世界タイトル";
 
 const returnStrings = () => {
-  return "文字列を返す";
+  return "文字列を返す!";
 };
 
 const setComment = () => {
