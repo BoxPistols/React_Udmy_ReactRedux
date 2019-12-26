@@ -13,7 +13,7 @@ const returnStrings = () => {
 };
 
 const setComment = () => {
-  return "コメント";
+  return "コメント!";
 };
 
 const reactElement = (
