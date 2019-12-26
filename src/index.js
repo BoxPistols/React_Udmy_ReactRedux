@@ -1,16 +1,28 @@
+// index.js
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import {} from "./styles.css";
 
-import "./styles.css";
+const el = <h2>こんにちは世界</h2>;
+console.log(el);
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
+const title = "こんにちは世界タイトル";
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const returnStrings = () => {
+  return "文字列を返す";
+};
+
+const setComment = () => {
+  return "コメント";
+};
+
+const reactElement = (
+  <div className="el">
+    <p>{returnStrings()}</p>
+    <p>{setComment()}</p>
+    <p>{Math.random()}</p>
+    <h2>{title}</h2>
+  </div>
+);
+
+render(reactElement, document.getElementById("root"));
