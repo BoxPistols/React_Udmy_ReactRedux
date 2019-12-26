@@ -4,9 +4,16 @@ import { render } from "react-dom";
 import {} from "./styles.css";
 
 // upper camel case
-const ReturnReactElement = () => {
-  return <h2>name</h2>;
+const ReturnReactElement = props => {
+  return (
+    <h2>
+      {props.name} / {props.music}
+    </h2>
+  );
 };
 
 // components <Hoge/>
-render(<ReturnReactElement />, document.getElementById("root"));
+render(
+  <ReturnReactElement name="Nakanishi" music="jazz" />,
+  document.getElementById("root")
+);
