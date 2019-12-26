@@ -1,4 +1,6 @@
-.el {
-  font-family: sans-serif;
-  /* text-align: center; */
+body {
+  background: #27251f;
+  color: #dde1e4fa;
+  font-family: "M PLUS 1p", sans-serif;
+  padding: 1% 5vw;
 }

@@ -2,18 +2,15 @@
 import React from "react";
 import { render } from "react-dom";
 import {} from "./styles.css";
+import { var1, func1 } from "./module";
 
-// upper camel case
-const ReturnReactElement = ({ name, music }) => {
-  return (
-    <h2>
-      {name} / {music}
-    </h2>
-  );
-};
+console.log(var1);
+func1();
 
-// components <Hoge/>
-render(
-  <ReturnReactElement name="Nakanishi" music="jazz" />,
-  document.getElementById("root")
+const App = () => (
+  <div>
+    <h2>Start</h2>
+  </div>
 );
+
+render(<App />, document.getElementById("root"));
