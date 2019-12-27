@@ -1,3 +1,4 @@
+// ReactComponent.js
 import React from "react";
 export const ReactComponent = ({ name, music }) => (
   <div>
