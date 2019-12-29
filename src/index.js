@@ -3,23 +3,34 @@ import React from "react";
 import { render } from "react-dom";
 import {} from "./styles.css";
 
-class Human extends React.Component {
+class H2O extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "田中" };
+    this.state = { temp: 15 };
   }
   render() {
     return (
-      <h2 onClick={this.onBtnClick}>
-        {this.state.name}: {this.props.age}才
-      </h2>
+      <div>
+        <h1>{this.props.name}</h1>
+        <h2>{this.state.temp}℃</h2>
+        <button onClick={this.onClickPlus}>+</button>
+        <button onClick={this.onClickPlus10}>+10</button>
+        <button onClick={this.onClickMinus}>-</button>
+        <button onClick={this.onClickMinus10}>-10</button>
+      </div>
     );
   }
-  // add Arrow function
-  onBtnClick = () => {
-    //alert("XXX");
-    this.setState({ name: this.state.name + "San" });
+  onClickPlus = () => {
+    this.setState({ temp: this.state.temp + 1 });
+  };
+  onClickPlus10 = () => {
+    this.setState({ temp: this.state.temp + 10 });
+  };
+  onClickMinus = () => {
+    this.setState({ temp: this.state.temp - 1 });
+  };
+  onClickMinus10 = () => {
+    this.setState({ temp: this.state.temp - 10 });
   };
 }
-
-render(<Human age="30" />, document.getElementById("root"));
+render(<H2O name="温度" />, document.getElementById("root"));
